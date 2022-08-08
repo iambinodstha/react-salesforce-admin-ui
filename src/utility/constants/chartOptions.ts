@@ -6,6 +6,11 @@ export const quarterlyPerfomanceOptions: Options = {
         align: "left",
         text: '<p class="text-sm font-semibold">Defi Quarterly Perfomance<p>',
     },
+    accessibility: {
+        announceNewData: {
+            enabled: true
+        }
+    },
     xAxis: {
         tickInterval: 7 * 24 * 3600 * 1000, // one week
         tickWidth: 0,
@@ -48,6 +53,11 @@ export const assetBreakDownOptions: Options = {
         align: "left",
         text: '<p class="text-sm font-semibold">Asset Breakdown<p>'
 
+    },
+    accessibility: {
+        announceNewData: {
+            enabled: true
+        }
     },
     xAxis: {
         title: {
@@ -99,6 +109,9 @@ export const donutPieChartOptions: Options = {
     accessibility: {
         point: {
             valueSuffix: '%'
+        },
+        announceNewData: {
+            enabled: true
         }
     },
     plotOptions: {
@@ -137,6 +150,11 @@ export const averageMonthlyWeatherOptions: Options = {
     title: {
         text: '<p class="text-sm font-semibold">Average Monthly Temperature and Rainfall in Tokyo<p>',
         align: "left"
+    },
+    accessibility: {
+        announceNewData: {
+            enabled: true
+        }
     },
     subtitle: {
         text: 'Source: WorldClimate.com',

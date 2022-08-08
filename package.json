@@ -48,7 +48,6 @@
     ]
   },
   "devDependencies": {
-    "@faker-js/faker": "^7.3.0",
     "mini-svg-data-uri": "^1.4.4",
     "react-app-rewired": "^2.2.1"
   }

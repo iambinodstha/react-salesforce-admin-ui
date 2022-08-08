@@ -19,7 +19,6 @@ let overviewChange = [
 ];
 
 
-
 const AccountsOverview = (props: Props) => {
   return (
     <div className='bg-white rounded overflow-hidden'>
@@ -30,7 +29,7 @@ const AccountsOverview = (props: Props) => {
           <Accounticon className='w-8 h-8' />
           <div>
             <p className='text-xs font-medium'>Accounts</p>
-            <h3 className='text-base font-semibold'>Trading Wallet</h3>
+            <h3 className='text-base font-bold'>Trading Wallet</h3>
           </div>
         </div>
 
@@ -40,17 +39,17 @@ const AccountsOverview = (props: Props) => {
             iconName="add"
             iconPosition="left"
             label="Add Tag"
-            className="mr-2 bg-white"
+            className="mr-2 bg-white font-medium"
           />
 
           <ButtonGroup>
             <Button
               label="Edit"
-              className="bg-white"
+              className="bg-white font-medium"
             />
             <Button
               label="Delete"
-              className="bg-white"
+              className="bg-white font-medium"
             />
             <Button
               assistiveText={{ icon: 'Icon Border-filled medium' }}
@@ -66,23 +65,22 @@ const AccountsOverview = (props: Props) => {
       </div>
 
 
-
       <div className='p-3 flex flex-col space-x-0 space-y-4 lg:space-y-0 lg:flex-row lg:space-x-20'>
 
         <div className='flex space-x-5 lg:space-x-10'>
           {overviewBalance.map((balance, index) => (
-            <div key={index} className="space-y-2">
-              <p className='text-xs md:text-sm font-normal'>{balance.label}</p>
-              <p className='text-xs md:text-sm font-semibold'>{balance.value}</p>
+            <div key={index} className="space-y-1 md:space-y-2">
+              <p className='text-xs font-medium text-gray-600'>{balance.label}</p>
+              <p className='text-xs font-bold text-gray-700'>{balance.value}</p>
             </div>
           ))}
         </div>
 
         <div className='flex space-x-5 lg:space-x-10'>
           {overviewChange.map((change, index) => (
-            <div key={index} className="space-y-2">
-              <p className='text-xs md:text-sm font-normal'>{change.label}</p>
-              <p className={`text-xs md:text-sm font-semibold ${change.isPositive ? 'text-green-500' : 'text-red-500'}`}>{change.value}</p>
+            <div key={index} className="space-y-1 md:space-y-2">
+              <p className='text-xs font-medium text-gray-600'>{change.label}</p>
+              <p className={`text-xs font-bold ${change.isPositive ? 'text-green-500' : 'text-red-500'}`}>{change.value}</p>
             </div>
           ))}
         </div>

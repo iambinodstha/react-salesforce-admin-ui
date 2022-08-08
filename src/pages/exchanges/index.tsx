@@ -4,7 +4,7 @@ import HighchartsReact from 'highcharts-react-official';
 import AccountsOverview from '../../components/AccountsOverview';
 import SubNav from '../../components/SubNav';
 import { assetBreakDownOptions, averageMonthlyWeatherOptions, donutPieChartOptions, quarterlyPerfomanceOptions } from '../../utility/constants';
-import { exchangesNavLinks } from "../../utility/constants/routes";
+import { exchangesNavLinkLists } from "../../utility/constants";
 
 type Props = {}
 
@@ -18,7 +18,7 @@ const index = (props: Props) => {
       </div>
 
       <div className='col-span-12'>
-        <SubNav navLinks={exchangesNavLinks} />
+        <SubNav navLinks={exchangesNavLinkLists} rootPath="/exchange"/>
       </div>
 
       <div className='col-span-12 xl:col-span-8'>

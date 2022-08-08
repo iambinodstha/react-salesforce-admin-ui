@@ -47,7 +47,7 @@ export default function ProtocolTable() {
                 className="mr-4"
               />
               {row.getCanExpand() && <TombIcon className='mr-2' />}
-              <div className={`${row.getCanExpand() ? "" : "font-bold"}`}>{getValue() as any}</div>
+              <div className={`${row.getCanExpand() ? "" : "font-bold text-gray-700"}`}>{getValue() as any}</div>
             </div>
 
             {row.getCanExpand() && (
@@ -83,12 +83,12 @@ export default function ProtocolTable() {
                 ) : (
                   <div className='w-min flex flex-col items-end space-y-1'>
                     <div className='flex space-x-2'>
-                      <p className='font-bold'>{nestedCell.usdc}</p>
+                      <p className='font-bold text-gray-700'>{nestedCell.usdc}</p>
                       <p>USDC</p>
                       <CryptoTokenIcon className='w-5 h-5' />
                     </div>
                     <div className='flex space-x-2'>
-                      <p className='font-bold'>{nestedCell.ftm}</p>
+                      <p className='font-bold text-gray-700'>{nestedCell.ftm}</p>
                       <p>FTM</p>
                       <FantomIcon className='w-5 h-5' />
                     </div>
@@ -105,7 +105,7 @@ export default function ProtocolTable() {
         header: () => <span>Tokens</span>,
         cell: ({ row }) => {
           return (
-            <div className={`${row.getCanExpand() ? "" : "font-bold"}`}>
+            <div className={`${row.getCanExpand() ? "" : "font-bold text-gray-700"}`}>
               {row.getCanExpand() ? (
                 <div className='flex space-x-2'>
                   {[...new Array(5)].map((_, index) => <TombIcon key={index} />)}
@@ -129,7 +129,7 @@ export default function ProtocolTable() {
         header: () => <span>Rewards</span>,
         cell: ({ row, getValue }) => {
           return (
-            <div className={`${row.getCanExpand() ? "" : "font-bold"}`}>
+            <div className={`${row.getCanExpand() ? "" : "font-bold text-gray-700"}`}>
               {getValue() as any}
             </div>
           )
@@ -193,7 +193,7 @@ export default function ProtocolTable() {
               <tr key={row.id} className="border-b-2">
                 {row.getVisibleCells().map(cell => {
                   return (
-                    <td key={cell.id} className={`py-2 px-3 text-xs font-medium text-gray-500 ${row.depth === 1 ? row.index % 2 === 0 ? "bg-gray-50" : "" : ""}`}>
+                    <td key={cell.id} className={`py-2 px-3 text-xs font-medium text-gray-600 ${row.depth === 1 ? row.index % 2 === 0 ? "bg-gray-50" : "" : ""}`}>
                       {flexRender(
                         cell.column.columnDef.cell,
                         cell.getContext()

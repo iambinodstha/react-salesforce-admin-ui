@@ -1,17 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/header';
-import Exchanges from './pages/exchanges';
-import DEFI from './pages/defi';
+import { routeLists } from './utility/constants';
+import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Header/>
-      <DEFI/>
+      <Router>
+        <Header />
+        <MainRoute />
+      </Router>
     </div>
   );
 }
 
 export default App;
+
+function MainRoute() {
+  return (
+    <Routes>
+      {routeLists.map(({ path, ...rest }, index) => (
+        <Route key={index} path={path} element={<rest.element/>} />
+      ))}
+    </Routes>
+  )
+}

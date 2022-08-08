@@ -4,7 +4,7 @@ import HighchartsReact from 'highcharts-react-official';
 import AccountsOverview from '../../components/AccountsOverview'
 import SubNav from '../../components/SubNav'
 import ProtocolTable from './ProtocolTable';
-import { defiNavLinks, protocolSplitOptions } from '../../utility/constants'
+import { defiNavLinkLists, protocolSplitOptions } from '../../utility/constants'
 
 function index() {
   return (
@@ -15,7 +15,7 @@ function index() {
       </div>
 
       <div className='col-span-12'>
-        <SubNav navLinks={defiNavLinks} />
+        <SubNav navLinks={defiNavLinkLists} rootPath="/defi" />
       </div>
 
       <div className='col-span-12 xl:col-span-8'>
