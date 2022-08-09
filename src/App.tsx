@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom';
 import Header from './components/nav';
 import { routeLists } from './utility/constants';
 import './App.css';
@@ -17,8 +17,11 @@ function App() {
 export default App;
 
 function MainRoute() {
+  const initialRoute = "/defi/overview";
+  
   return (
     <Routes>
+      <Route path="/" element={<Navigate to={initialRoute} />} />
       {routeLists.map(({ path, ...rest }, index) => (
         rest.subRouteLists ? (
           <Route key={index} path={path} element={<rest.element />} >
