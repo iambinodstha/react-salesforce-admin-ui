@@ -1,10 +1,8 @@
-import Highcharts from 'highcharts';
-import HighchartsReact from 'highcharts-react-official';
+import { Outlet } from 'react-router-dom';
 
 import AccountsOverview from '../../components/AccountsOverview'
-import SubNav from '../../components/SubNav'
-import ProtocolTable from './ProtocolTable';
-import { defiNavLinkLists, protocolSplitOptions } from '../../utility/constants'
+import SubNavBar from '../../components/nav/SubNavBar'
+import { defiNavLinkLists } from '../../utility/constants'
 
 function index() {
   return (
@@ -15,22 +13,14 @@ function index() {
       </div>
 
       <div className='col-span-12'>
-        <SubNav navLinks={defiNavLinkLists} rootPath="/defi" />
+        <SubNavBar navLinks={defiNavLinkLists} />
       </div>
 
-      <div className='col-span-12 xl:col-span-8'>
-        <ProtocolTable />
-      </div>
-
-      <div className='col-span-12 lg:col-span-6 xl:col-span-4'>
-        <HighchartsReact
-          highcharts={Highcharts}
-          options={protocolSplitOptions}
-        />
-      </div>
+      {/* render sub route component */}
+      <Outlet />
 
     </div>
   )
 }
 
-export default index
+export default index;

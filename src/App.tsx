@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './components/header';
+import Header from './components/nav';
 import { routeLists } from './utility/constants';
 import './App.css';
 
@@ -20,7 +20,15 @@ function MainRoute() {
   return (
     <Routes>
       {routeLists.map(({ path, ...rest }, index) => (
-        <Route key={index} path={path} element={<rest.element/>} />
+        rest.subRouteLists ? (
+          <Route key={index} path={path} element={<rest.element />} >
+            {rest.subRouteLists.map((subRoute, subIndex) => (
+              <Route key={subIndex} path={subRoute.path} element={<subRoute.element />} />
+            ))}
+          </Route>
+        ) : (
+          <Route key={index} path={path} element={<rest.element />} />
+        )
       ))}
     </Routes>
   )

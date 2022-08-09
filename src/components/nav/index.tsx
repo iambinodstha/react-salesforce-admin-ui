@@ -1,13 +1,13 @@
-import Action from "./Action"
-import Nav from "./Nav"
+import NavBarAction from "./NavBarAction"
+import NavBar from "./NavBar"
 
 type Props = {}
 
 function index({ }: Props) {
   return (
     <header className='py-1 px-6'>
-      <Action />
-      <Nav />
+      <NavBarAction />
+      <NavBar />
     </header>
   )
 }

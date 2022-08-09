@@ -27,7 +27,7 @@ export const navLinkLists = [
     { id: "1", label: "Home", to: "/home" },
     { id: "2", label: "DeFi", to: "/defi", subNavLists: defiNavLinkLists },
     { id: "3", label: "Exchanges", to: "/exchange", subNavLists: exchangesNavLinkLists },
-    { id: "4", label: "Dashboards", to: "/dashboard" },
+    { id: "4", label: "Dashboard", to: "/dashboard" },
     { id: "5", label: "Assets", to: "/assets" },
     { id: "6", label: "Reports", to: "/reports" },
     { id: "7", label: "Snapshots", to: "/snapshots" },

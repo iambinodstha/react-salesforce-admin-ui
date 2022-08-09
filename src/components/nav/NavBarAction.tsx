@@ -17,10 +17,11 @@ let headerIcons = [
     { id: "4", name: "notification", class: "" },
 ]
 
-const Action = (props: Props) => {
+const NavBarAction = (props: Props) => {
     return (
         <div className='flex items-center space-y-0 flex-row justify-between'>
             <img className='h-11 w-11 object-contain' src={logo} alt="hedge-fund-manager-logo" />
+
             <Input
                 id="inline-help-with-left-icon"
                 iconLeft={<InputIcon name="search" category="utility" variant='combobox' />}
@@ -79,4 +80,4 @@ const Action = (props: Props) => {
     )
 }
 
-export default Action;
+export default NavBarAction;

@@ -8,12 +8,12 @@ import { navLinkLists } from '../../utility/constants';
 
 type Props = {}
 
-const Nav = (props: Props) => {
+const NavBar = (props: Props) => {
     const location = useLocation();
     return (
-        <div className='mt-2 flex space-x-6 items-center'>
-            <MenuIcon className='w-6 h-6 fill-gray-500' />
-            <h3 className='text-lg font-semibold text-gray-600'>Hedge Fund Manager</h3>
+        <div className='px-2 mt-2 flex space-x-6 items-center'>
+            <MenuIcon className='w-5 h-5 fill-gray-500' />
+            <h3 className='text-lg font-semibold text-gray-800'>Hedge Fund Manager</h3>
 
             <div className='hidden md:flex items-center'>
                 {navLinkLists.map(link => {
@@ -47,7 +47,7 @@ const Nav = (props: Props) => {
                             style={{ marginTop: '10px', maxWidth: '220px' }}
                             heading={<div></div>}
                         >
-                            <Button variant='base' className={`flex items-center py-1 px-3 border-t-4 hover:bg-sky-50 ${isActive ? "bg-blue-50 border-t-sky-500" : ""}`}>
+                            <Button variant='base' className={`flex items-center py-1 px-3 border-t-4 hover:bg-sky-50 focus:ring-0 ${isActive ? "bg-blue-50 border-t-sky-500" : ""}`}>
                                 <p className=' text-gray-700 text-sm font-medium'>{link.label}</p>
                                 <Icon
                                     assistiveText={{ label: 'Account' }}
@@ -77,4 +77,4 @@ const Nav = (props: Props) => {
     )
 }
 
-export default Nav;
+export default NavBar;
