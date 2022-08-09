@@ -52,7 +52,7 @@ const NavBar = (props: Props) => {
                                 <Icon
                                     assistiveText={{ label: 'Account' }}
                                     category="utility"
-                                    name="down"
+                                    name="chevrondown"
                                     size="x-small"
                                     className="fill-gray-500 ml-2"
                                 />

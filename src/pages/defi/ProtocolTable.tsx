@@ -60,7 +60,7 @@ export default function ProtocolTable() {
                 <Icon
                   assistiveText={{ label: 'Announcement' }}
                   category="utility"
-                  name={row.getIsExpanded() ? "up" : "down"}
+                  name={row.getIsExpanded() ? "chevronup" : "chevrondown"}
                   size="x-small"
                   className="fill-gray-400"
                 />
